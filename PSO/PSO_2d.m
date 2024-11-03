@@ -50,5 +50,23 @@ while iter <= ger
     x = x + v;
     x(x > limit(2)) = limit(2);
     x(x < limit(1)) = limit(1);
-    
+    record(iter) = fym;
+    subplot(1,2,1);
+    mesh(X,Y,Z);
+    hold on
+    scatter3(x(:,1),x(:,2),f(x(:,1),x(:,2)),'-ro');
+    title(['状态位置变化','-迭代次数：',num2str(iter)]);
+    subplot(1,2,2);
+    plot(record);
+    title('最有适应度进化过程');
+    pause(0.01);
+    iter = iter + 1;
 end
+
+figure(4);
+mesh(X,Y,Z);
+hold on
+scatter3(x(:,1),x(:,2),f(x(:,1),x(:,2)),'-ro');
+title('最终状态位置')
+disp(['最优值：',num2str(fym)]);
+disp(['变量取值：',num2str(ym)]);

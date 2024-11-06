@@ -1,0 +1,14 @@
+J=0.0005;
+s=tf('s');
+tf_pi=tf([J*2*pi*100 J*2*pi*100*(2*pi*100/5)],[1,0]);
+tf_pc=tf([2*pi*500],[1 2*pi*500]);
+tf_plant=tf([1],[J 0]);
+tf_open1=tf_pi*tf_pc*tf_plant;
+tf_close1=tf_open1/(1+tf_open1);
+tf_gf=s*J;
+kf=0.6;
+tf_close2=(kf*tf_gf+tf_pi)*tf_pc*tf_plant/(1+tf_pi*tf_pc*tf_plant);
+h=bodeoptions;
+h.PhaseMatching='on';
+bodeplot(tf_close1,'-b',tf_close2,'-r.',{0.1,10000},h);
+legend('pi','feedforwd & pi');

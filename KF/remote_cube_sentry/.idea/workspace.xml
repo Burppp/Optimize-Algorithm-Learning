@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="CMakePresetLoader">{
+  &quot;useNewFormat&quot;: true
+}</component>
+  <component name="CMakeProjectFlavorService">
+    <option name="flavorId" value="CMakePlainProjectFlavor" />
+  </component>
+  <component name="CMakeReloadState">
+    <option name="reloaded" value="true" />
+  </component>
+  <component name="CMakeRunConfigurationManager">
+    <generated>
+      <config projectName="remote_cube_sentry" targetName="remote_cube_sentry.elf" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+      <configuration PROFILE_NAME="Release" ENABLED="true" CONFIG_NAME="Release" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1781f5cc-6ea2-4e87-8b8b-cbec3cfa8cf3" name="更改" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/application/steering_wheel.c" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProjectApplicationVersion">
+    <option name="ide" value="CLion" />
+    <option name="majorVersion" value="2023" />
+    <option name="minorVersion" value="2.2" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2eAlYiFgm4WWrS3lSIVurcyiPEa" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "OpenOCD 下载并运行.OCD remote_cube_sentry.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/Lumos/Documents/GitHub/Optimize-Algorithm-Learning/KF/remote_cube_sentry",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "structure.view.defaults.are.configured": "true",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="OpenOCD 下载并运行.OCD remote_cube_sentry">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="remote_cube_sentry.elf" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="remote_cube_sentry" TARGET_NAME="remote_cube_sentry.elf" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="remote_cube_sentry" RUN_TARGET_NAME="remote_cube_sentry.elf">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="CMake 应用程序.remote_cube_sentry.elf" />
+      <item itemvalue="OpenOCD 下载并运行.OCD remote_cube_sentry" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="1781f5cc-6ea2-4e87-8b8b-cbec3cfa8cf3" name="更改" comment="" />
+      <created>1711355312615</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1711355312615</updated>
+      <workItem from="1711355313745" duration="793000" />
+      <workItem from="1711356150120" duration="793000" />
+      <workItem from="1711356961878" duration="1680000" />
+      <workItem from="1711358796157" duration="11239000" />
+      <workItem from="1711389146834" duration="28439000" />
+      <workItem from="1711517724859" duration="6314000" />
+      <workItem from="1711527713928" duration="1887000" />
+      <workItem from="1711541739432" duration="21544000" />
+      <workItem from="1711685961277" duration="23313000" />
+      <workItem from="1711788337970" duration="10709000" />
+      <workItem from="1711809881434" duration="1907000" />
+      <workItem from="1711785380932" duration="7653000" />
+      <workItem from="1712084548532" duration="2824000" />
+      <workItem from="1712151010796" duration="18431000" />
+      <workItem from="1712294449204" duration="15981000" />
+      <workItem from="1712562193752" duration="19413000" />
+      <workItem from="1712647334950" duration="7221000" />
+      <workItem from="1712758664087" duration="1000" />
+      <workItem from="1712839457842" duration="2292000" />
+      <workItem from="1713176617720" duration="6137000" />
+      <workItem from="1713370368263" duration="3311000" />
+      <workItem from="1713413032572" duration="27017000" />
+      <workItem from="1713705817295" duration="10000" />
+      <workItem from="1713798619833" duration="685000" />
+      <workItem from="1713852569836" duration="11000" />
+      <workItem from="1714148881504" duration="8807000" />
+      <workItem from="1714616259867" duration="819000" />
+      <workItem from="1714618361461" duration="3696000" />
+      <workItem from="1715091014233" duration="738000" />
+      <workItem from="1715239859271" duration="316000" />
+      <workItem from="1715263034984" duration="4426000" />
+      <workItem from="1715323499590" duration="2482000" />
+      <workItem from="1715440788495" duration="679000" />
+      <workItem from="1715620823742" duration="1006000" />
+      <workItem from="1715622426876" duration="407000" />
+      <workItem from="1716217539149" duration="12585000" />
+      <workItem from="1716285972002" duration="337000" />
+      <workItem from="1716287757203" duration="1264000" />
+      <workItem from="1716313095278" duration="76000" />
+      <workItem from="1716313181293" duration="210000" />
+      <workItem from="1716406758520" duration="873000" />
+      <workItem from="1716483510632" duration="1107000" />
+      <workItem from="1716489090075" duration="2285000" />
+      <workItem from="1716570886356" duration="18000" />
+      <workItem from="1716572433133" duration="81000" />
+      <workItem from="1716572607172" duration="122000" />
+      <workItem from="1716575173240" duration="26000" />
+      <workItem from="1716652256475" duration="137000" />
+      <workItem from="1716772268401" duration="2822000" />
+      <workItem from="1716794892012" duration="25000" />
+      <workItem from="1716808805272" duration="655000" />
+      <workItem from="1716886389131" duration="17403000" />
+      <workItem from="1717593733856" duration="53000" />
+      <workItem from="1717863094247" duration="41000" />
+      <workItem from="1717864045285" duration="222000" />
+      <workItem from="1721048378294" duration="132000" />
+      <workItem from="1721048705960" duration="3724000" />
+      <workItem from="1721118867649" duration="2404000" />
+      <workItem from="1723597924411" duration="543000" />
+      <workItem from="1723598480382" duration="594000" />
+      <workItem from="1723621771788" duration="5512000" />
+      <workItem from="1723705175317" duration="1227000" />
+      <workItem from="1723886319364" duration="78000" />
+      <workItem from="1725191570487" duration="1269000" />
+      <workItem from="1725199583492" duration="89000" />
+      <workItem from="1725200752231" duration="88000" />
+      <workItem from="1725247465102" duration="164000" />
+      <workItem from="1725248012917" duration="6144000" />
+      <workItem from="1725294360849" duration="621000" />
+      <workItem from="1725295972304" duration="32000" />
+      <workItem from="1725758434820" duration="250000" />
+      <workItem from="1726718559250" duration="1380000" />
+      <workItem from="1726839995620" duration="1553000" />
+      <workItem from="1727709205889" duration="7000" />
+      <workItem from="1727954429442" duration="774000" />
+      <workItem from="1730554003344" duration="851000" />
+      <workItem from="1730621143160" duration="33000" />
+      <workItem from="1730621185010" duration="1000" />
+      <workItem from="1730734918760" duration="643000" />
+      <workItem from="1730735574965" duration="297000" />
+      <workItem from="1730735969801" duration="22000" />
+      <workItem from="1730736019614" duration="25000" />
+      <workItem from="1730736183810" duration="35000" />
+      <workItem from="1730806138140" duration="455000" />
+      <workItem from="1730867055913" duration="9000" />
+      <workItem from="1730876149899" duration="49000" />
+      <workItem from="1730881520774" duration="13159000" />
+      <workItem from="1730899740489" duration="3959000" />
+      <workItem from="1730955123119" duration="1688000" />
+      <workItem from="1731071561168" duration="2341000" />
+      <workItem from="1731221598761" duration="40000" />
+      <workItem from="1731223225567" duration="1834000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VCPKGProject">
+    <isAutomaticCheckingOnLaunch value="false" />
+    <isAutomaticFoundErrors value="true" />
+    <isAutomaticReloadCMake value="true" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="com.jetbrains.cidr.embedded.openocd.conf.type">
+        <watch expression="Motor" language="ObjectiveC" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

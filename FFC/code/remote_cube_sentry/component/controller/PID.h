@@ -49,6 +49,10 @@ typedef struct
     float i;
     float d;
 
+    float n;
+    float dt;
+    float DWT_CNT;
+
     /* 目标值、反馈值、误差值 */
     float set;
     float get;
@@ -56,6 +60,7 @@ typedef struct
 
     /* p、i、d各项计算出的输出 */
     float pout;
+    float iterm;
     float iout;
     float dout;
 

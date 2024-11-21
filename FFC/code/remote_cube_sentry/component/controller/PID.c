@@ -30,6 +30,7 @@
 
 #include <math.h>
 #include "PID.h"
+#include "bsp_dwt.h"
 
 
 
@@ -69,13 +70,22 @@ void pid_init(pid_t *pid, uint32_t max_out, uint32_t intergral_limit, \
   */
 float pid_calc(pid_t *pid, float get, float set)
 {
+    pid->dt = DWT_GetDeltaT((void*)&pid->DWT_CNT);
+
     pid->get = get;
     pid->set = set;
     pid->err[NOW] = set - get;
 
     pid->pout = pid->p * pid->err[NOW];
-    pid->iout += pid->i * pid->err[NOW];
+    pid->iterm = pid->i * pid->err[NOW] * pid->dt;
+
+//    pid->iout += pid->i * pid->err[NOW];
     pid->dout = pid->d * (pid->err[NOW] - pid->err[LAST]);
+
+    if(pid->n)
+    {
+        pid->dout = (pid->n * pid->dout + pid->err[1]) / (pid->n + 1);
+    }
 
     abs_limit(&(pid->iout), pid->integral_limit);
     pid->out = pid->pout + pid->iout + pid->dout;
@@ -88,8 +98,8 @@ float pid_calc(pid_t *pid, float get, float set)
 
 float pid_loop_calc(pid_t *pid,float get,float set,float max_value,float min_value){
     float gap,mid;
-    mid=(max_value-min_value)/2;
-    gap=set-get;
+    mid=(max_value-min_value)/2;//12.5
+    gap=set-get;//11.5
     if(gap>=mid)
     {
         while(gap < min_value || gap > max_value)

@@ -5675,9 +5675,8 @@ LOAD c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb
                 0x2000afcc       0x6e CMakeFiles/remote_cube_sentry.elf.dir/application/Detection.c.obj
                 0x2000afcc                detect_list
  *fill*         0x2000b03a        0x2 
- .bss.data      0x2000b03c        0x2 CMakeFiles/remote_cube_sentry.elf.dir/application/Feedforward_test.c.obj
+ .bss.data      0x2000b03c        0x4 CMakeFiles/remote_cube_sentry.elf.dir/application/Feedforward_test.c.obj
                 0x2000b03c                data
- *fill*         0x2000b03e        0x2 
  .bss.feedforward
                 0x2000b040       0x98 CMakeFiles/remote_cube_sentry.elf.dir/application/Feedforward_test.c.obj
                 0x2000b040                feedforward
@@ -6815,7 +6814,7 @@ LOAD c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb
  .debug_str     0x0000bcee      0x14e CMakeFiles/remote_cube_sentry.elf.dir/application/Detection.c.obj
                                 0x4b7 (size before relaxing)
  .debug_str     0x0000be3c      0x24b CMakeFiles/remote_cube_sentry.elf.dir/application/Feedforward_test.c.obj
-                                0xc8a (size before relaxing)
+                                0xc8c (size before relaxing)
  .debug_str     0x0000c087      0x376 CMakeFiles/remote_cube_sentry.elf.dir/application/Gimbal.c.obj
                                 0xab2 (size before relaxing)
  .debug_str     0x0000c3fd     0x1750 CMakeFiles/remote_cube_sentry.elf.dir/application/Referee.c.obj

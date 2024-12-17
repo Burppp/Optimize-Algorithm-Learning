@@ -34,18 +34,17 @@ def read_feedback_data():
             if char == b'j':  # 帧尾
                 break
 
-        # 打印完整的帧数据
-        #print(f"Received frame: {frame}")
+        print(f"Received frame = {frame}")
 
         # 在帧中向前查找帧头'h'
         start_index = frame.find(b'h')
         if start_index != -1 and frame[start_index + 1:].endswith(b'j'):
             # 提取数据部分
             data = frame[start_index + 1:-1]  # 去掉帧头和帧尾
-            if len(data) == 2:  # 现在数据部分只有2个字节
-
-                # 使用struct解包数据，'b'表示有符号的byte
-                torque_feedback, torque_set = struct.unpack('<bb', data)
+            print(f"len(data) = {len(data)}")
+            if len(data) == 4:  # 现在数据部分应该有4个字节
+                # 使用struct解包数据，'h'表示有符号的16位整数
+                torque_feedback, torque_set = struct.unpack('<hh', data)
                 feedback = FeedbackData(torque_feedback, torque_set)
                 print(feedback)
             else:

@@ -20,8 +20,8 @@ extern CAN_HandleTypeDef hcan1;
 typedef struct
 {
 //    uint32_t time;
-    int8_t torque_feedback;
-    int8_t torque_set;
+    int16_t torque_feedback;
+    int16_t torque_set;
 }feedback_data;
 
 void FeedForwardControll_task(void const * argument);

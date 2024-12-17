@@ -6,7 +6,6 @@ class FeedbackData:
     def __init__(self, torque_feedback, torque_set):
         self.torque_feedback = torque_feedback
         self.torque_set = torque_set
-        # self.checksum = checksum
 
     def __str__(self):
         return (f"Torque Feedback: {self.torque_feedback}, "
@@ -36,17 +35,17 @@ def read_feedback_data():
                 break
 
         # 打印完整的帧数据
-        print(f"Received frame: {frame}")
+        #print(f"Received frame: {frame}")
 
         # 在帧中向前查找帧头'h'
         start_index = frame.find(b'h')
         if start_index != -1 and frame[start_index + 1:].endswith(b'j'):
-            # 提取数据部分和校验位
+            # 提取数据部分
             data = frame[start_index + 1:-1]  # 去掉帧头和帧尾
-            # print(f"data = {data},len(data) = {len(data)}")
             if len(data) == 2:  # 现在数据部分只有2个字节
-                # 使用struct解包数据
-                torque_feedback, torque_set = struct.unpack('<BB', data)
+
+                # 使用struct解包数据，'b'表示有符号的byte
+                torque_feedback, torque_set = struct.unpack('<bb', data)
                 feedback = FeedbackData(torque_feedback, torque_set)
                 print(feedback)
             else:

@@ -6107,7 +6107,7 @@ LOAD c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb
 LOAD c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libm.a
 LOAD c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb/v7e-m+fp/hard\libgcc.a
 
-.debug_info     0x00000000    0x4c026
+.debug_info     0x00000000    0x4c03e
  .debug_info    0x00000000      0x86a CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/adc.c.obj
  .debug_info    0x0000086a      0xd18 CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/can.c.obj
  .debug_info    0x00001582      0x43a CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/crc.c.obj
@@ -6160,39 +6160,39 @@ LOAD c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb
  .debug_info    0x00031e95     0x168b CMakeFiles/remote_cube_sentry.elf.dir/application/Atti.c.obj
  .debug_info    0x00033520      0xbda CMakeFiles/remote_cube_sentry.elf.dir/application/Calibrate.c.obj
  .debug_info    0x000340fa      0x4b2 CMakeFiles/remote_cube_sentry.elf.dir/application/Detection.c.obj
- .debug_info    0x000345ac     0x11a1 CMakeFiles/remote_cube_sentry.elf.dir/application/Feedforward_test.c.obj
- .debug_info    0x0003574d     0x1099 CMakeFiles/remote_cube_sentry.elf.dir/application/Gimbal.c.obj
- .debug_info    0x000367e6     0x1491 CMakeFiles/remote_cube_sentry.elf.dir/application/Referee.c.obj
- .debug_info    0x00037c77      0x993 CMakeFiles/remote_cube_sentry.elf.dir/application/remote.c.obj
- .debug_info    0x0003860a     0x2264 CMakeFiles/remote_cube_sentry.elf.dir/application/steering_wheel.c.obj
- .debug_info    0x0003a86e     0x11e2 CMakeFiles/remote_cube_sentry.elf.dir/application/travelling_wheel.c.obj
- .debug_info    0x0003ba50      0x288 CMakeFiles/remote_cube_sentry.elf.dir/application/usb_task.c.obj
- .debug_info    0x0003bcd8      0x7f8 CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_adc.c.obj
- .debug_info    0x0003c4d0      0x680 CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_buzzer.c.obj
- .debug_info    0x0003cb50     0x1c94 CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_can.c.obj
- .debug_info    0x0003e7e4      0x260 CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_delay.c.obj
- .debug_info    0x0003ea44      0x54f CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_dwt.c.obj
- .debug_info    0x0003ef93      0x536 CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_flash.c.obj
- .debug_info    0x0003f4c9      0x664 CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_imu_pwm.c.obj
- .debug_info    0x0003fb2d      0x6c7 CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_led.c.obj
- .debug_info    0x000401f4      0x5e6 CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_rc.c.obj
- .debug_info    0x000407da      0x686 CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_spi.c.obj
- .debug_info    0x00040e60      0x8d1 CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_usart.c.obj
- .debug_info    0x00041731      0x76d CMakeFiles/remote_cube_sentry.elf.dir/component/algorithm/AHRS.c.obj
- .debug_info    0x00041e9e      0x368 CMakeFiles/remote_cube_sentry.elf.dir/component/algorithm/AHRS_MiddleWare.c.obj
- .debug_info    0x00042206      0x4d9 CMakeFiles/remote_cube_sentry.elf.dir/component/algorithm/user_lib.c.obj
- .debug_info    0x000426df      0x7dc CMakeFiles/remote_cube_sentry.elf.dir/component/comunication/decode.c.obj
- .debug_info    0x00042ebb      0x633 CMakeFiles/remote_cube_sentry.elf.dir/component/comunication/packet.c.obj
- .debug_info    0x000434ee      0x3ec CMakeFiles/remote_cube_sentry.elf.dir/component/controller/Feedforward.c.obj
- .debug_info    0x000438da      0x372 CMakeFiles/remote_cube_sentry.elf.dir/component/controller/OLS.c.obj
- .debug_info    0x00043c4c      0x527 CMakeFiles/remote_cube_sentry.elf.dir/component/controller/PID.c.obj
- .debug_info    0x00044173      0x93d CMakeFiles/remote_cube_sentry.elf.dir/component/devices/BMI088Middleware.c.obj
- .debug_info    0x00044ab0     0x1549 CMakeFiles/remote_cube_sentry.elf.dir/component/devices/BMI088driver.c.obj
- .debug_info    0x00045ff9      0x3aa CMakeFiles/remote_cube_sentry.elf.dir/component/support/CRC8_CRC16.c.obj
- .debug_info    0x000463a3     0x12f6 CMakeFiles/remote_cube_sentry.elf.dir/component/support/fifo.c.obj
- .debug_info    0x00047699     0x1293 CMakeFiles/remote_cube_sentry.elf.dir/connectivity/can_hardwares.c.obj
- .debug_info    0x0004892c     0x1874 C:/Users/Lumos/Documents/GitHub/Optimize-Algorithm-Learning/FFC/code/remote_cube_sentry/Middlewares/ST/ARM/DSP/Lib/libarm_cortexM4lf_math.a(arm_sin_f32.o)
- .debug_info    0x0004a1a0     0x1e86 C:/Users/Lumos/Documents/GitHub/Optimize-Algorithm-Learning/FFC/code/remote_cube_sentry/Middlewares/ST/ARM/DSP/Lib/libarm_cortexM4lf_math.a(arm_common_tables.o)
+ .debug_info    0x000345ac     0x11b9 CMakeFiles/remote_cube_sentry.elf.dir/application/Feedforward_test.c.obj
+ .debug_info    0x00035765     0x1099 CMakeFiles/remote_cube_sentry.elf.dir/application/Gimbal.c.obj
+ .debug_info    0x000367fe     0x1491 CMakeFiles/remote_cube_sentry.elf.dir/application/Referee.c.obj
+ .debug_info    0x00037c8f      0x993 CMakeFiles/remote_cube_sentry.elf.dir/application/remote.c.obj
+ .debug_info    0x00038622     0x2264 CMakeFiles/remote_cube_sentry.elf.dir/application/steering_wheel.c.obj
+ .debug_info    0x0003a886     0x11e2 CMakeFiles/remote_cube_sentry.elf.dir/application/travelling_wheel.c.obj
+ .debug_info    0x0003ba68      0x288 CMakeFiles/remote_cube_sentry.elf.dir/application/usb_task.c.obj
+ .debug_info    0x0003bcf0      0x7f8 CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_adc.c.obj
+ .debug_info    0x0003c4e8      0x680 CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_buzzer.c.obj
+ .debug_info    0x0003cb68     0x1c94 CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_can.c.obj
+ .debug_info    0x0003e7fc      0x260 CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_delay.c.obj
+ .debug_info    0x0003ea5c      0x54f CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_dwt.c.obj
+ .debug_info    0x0003efab      0x536 CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_flash.c.obj
+ .debug_info    0x0003f4e1      0x664 CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_imu_pwm.c.obj
+ .debug_info    0x0003fb45      0x6c7 CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_led.c.obj
+ .debug_info    0x0004020c      0x5e6 CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_rc.c.obj
+ .debug_info    0x000407f2      0x686 CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_spi.c.obj
+ .debug_info    0x00040e78      0x8d1 CMakeFiles/remote_cube_sentry.elf.dir/bsp/bsp_usart.c.obj
+ .debug_info    0x00041749      0x76d CMakeFiles/remote_cube_sentry.elf.dir/component/algorithm/AHRS.c.obj
+ .debug_info    0x00041eb6      0x368 CMakeFiles/remote_cube_sentry.elf.dir/component/algorithm/AHRS_MiddleWare.c.obj
+ .debug_info    0x0004221e      0x4d9 CMakeFiles/remote_cube_sentry.elf.dir/component/algorithm/user_lib.c.obj
+ .debug_info    0x000426f7      0x7dc CMakeFiles/remote_cube_sentry.elf.dir/component/comunication/decode.c.obj
+ .debug_info    0x00042ed3      0x633 CMakeFiles/remote_cube_sentry.elf.dir/component/comunication/packet.c.obj
+ .debug_info    0x00043506      0x3ec CMakeFiles/remote_cube_sentry.elf.dir/component/controller/Feedforward.c.obj
+ .debug_info    0x000438f2      0x372 CMakeFiles/remote_cube_sentry.elf.dir/component/controller/OLS.c.obj
+ .debug_info    0x00043c64      0x527 CMakeFiles/remote_cube_sentry.elf.dir/component/controller/PID.c.obj
+ .debug_info    0x0004418b      0x93d CMakeFiles/remote_cube_sentry.elf.dir/component/devices/BMI088Middleware.c.obj
+ .debug_info    0x00044ac8     0x1549 CMakeFiles/remote_cube_sentry.elf.dir/component/devices/BMI088driver.c.obj
+ .debug_info    0x00046011      0x3aa CMakeFiles/remote_cube_sentry.elf.dir/component/support/CRC8_CRC16.c.obj
+ .debug_info    0x000463bb     0x12f6 CMakeFiles/remote_cube_sentry.elf.dir/component/support/fifo.c.obj
+ .debug_info    0x000476b1     0x1293 CMakeFiles/remote_cube_sentry.elf.dir/connectivity/can_hardwares.c.obj
+ .debug_info    0x00048944     0x1874 C:/Users/Lumos/Documents/GitHub/Optimize-Algorithm-Learning/FFC/code/remote_cube_sentry/Middlewares/ST/ARM/DSP/Lib/libarm_cortexM4lf_math.a(arm_sin_f32.o)
+ .debug_info    0x0004a1b8     0x1e86 C:/Users/Lumos/Documents/GitHub/Optimize-Algorithm-Learning/FFC/code/remote_cube_sentry/Middlewares/ST/ARM/DSP/Lib/libarm_cortexM4lf_math.a(arm_common_tables.o)
 
 .debug_abbrev   0x00000000     0xc05e
  .debug_abbrev  0x00000000      0x1ed CMakeFiles/remote_cube_sentry.elf.dir/Core/Src/adc.c.obj
@@ -6815,7 +6815,7 @@ LOAD c:/progra~2/armgnu~1/12977f~1.2mp/bin/../lib/gcc/arm-none-eabi/12.2.1/thumb
  .debug_str     0x0000bcee      0x14e CMakeFiles/remote_cube_sentry.elf.dir/application/Detection.c.obj
                                 0x4b7 (size before relaxing)
  .debug_str     0x0000be3c      0x24b CMakeFiles/remote_cube_sentry.elf.dir/application/Feedforward_test.c.obj
-                                0xc7a (size before relaxing)
+                                0xc8a (size before relaxing)
  .debug_str     0x0000c087      0x376 CMakeFiles/remote_cube_sentry.elf.dir/application/Gimbal.c.obj
                                 0xab2 (size before relaxing)
  .debug_str     0x0000c3fd     0x1750 CMakeFiles/remote_cube_sentry.elf.dir/application/Referee.c.obj

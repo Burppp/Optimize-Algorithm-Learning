@@ -38,13 +38,13 @@ _Noreturn void FeedForwardControll_task(void const * argument)
     while(1)
     {
         time = DWT_GetTimeline_ms();
-        torque_set = 0.3 * arm_sin_f32(0.001 * time + 3);
+        torque_set = 0.2 * arm_sin_f32(0.001 * time + 3);
 
         MIT_CtrlMotor(&hcan1, 0x03, 0, 0, 0, 0, torque_set);
 
 //        data.time = (uint32_t)(time * 1000000);
-        data.torque_feedback = Motor.torque * 100;
-        data.torque_set = torque_set * 100;
+        data.torque_feedback = Motor.torque * 1000;
+        data.torque_set = torque_set * 1000;
 
         HAL_UART_Transmit(&huart6, (uint8_t *)&frame_head, sizeof(frame_head), 0xff);
         HAL_UART_Transmit(&huart6, (uint8_t *)&data, sizeof(data), 0xff);

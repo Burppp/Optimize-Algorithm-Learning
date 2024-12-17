@@ -1,5 +1,8 @@
 import serial
 import struct
+import csv
+import os
+from datetime import datetime
 
 # 定义新的反馈数据结构体，取消了time字段
 class FeedbackData:
@@ -21,7 +24,14 @@ ser = serial.Serial(
     timeout=1           # 读取超时时间
 )
 
-# 读取串口数据
+# 确保CSV文件存在
+def ensure_csv_file(file_path):
+    if not os.path.exists(file_path):
+        with open(file_path, mode='w', newline='') as file:
+            writer = csv.writer(file)
+            writer.writerow(['Value'])  # 写入表头
+
+# 读取串口数据并写入CSV
 def read_feedback_data():
     try:
         # 读取数据直到遇到帧尾'j'
@@ -34,25 +44,40 @@ def read_feedback_data():
             if char == b'j':  # 帧尾
                 break
 
-        print(f"Received frame = {frame}")
+        # print(f"Received frame = {frame}")
 
         # 在帧中向前查找帧头'h'
         start_index = frame.find(b'h')
         if start_index != -1 and frame[start_index + 1:].endswith(b'j'):
             # 提取数据部分
             data = frame[start_index + 1:-1]  # 去掉帧头和帧尾
-            print(f"len(data) = {len(data)}")
+            # print(f"len(data) = {len(data)}")
             if len(data) == 4:  # 现在数据部分应该有4个字节
                 # 使用struct解包数据，'h'表示有符号的16位整数
                 torque_feedback, torque_set = struct.unpack('<hh', data)
+                torque_feedback = float(torque_feedback / 1000)
+                torque_set = float(torque_set / 1000)
                 feedback = FeedbackData(torque_feedback, torque_set)
                 print(feedback)
+
+                # 写入CSV文件
+                with open('torque_feedback.csv', mode='a', newline='') as file:
+                    writer = csv.writer(file)
+                    writer.writerow([torque_feedback])
+
+                with open('torque_set.csv', mode='a', newline='') as file:
+                    writer = csv.writer(file)
+                    writer.writerow([torque_set])
             else:
                 print("Received incomplete data.")
         else:
             print("Invalid frame header or footer.")
     except serial.SerialException as e:
         print(f"Serial error: {e}")
+
+# 确保CSV文件存在
+ensure_csv_file('torque_feedback.csv')
+ensure_csv_file('torque_set.csv')
 
 # 主循环
 try:

@@ -13,7 +13,7 @@
 #include "Feedforward.h"
 
 #define INIT_TIME 150
-#define CHASSIS_PERIOD 10
+#define CHASSIS_PERIOD 5
 
 extern CAN_HandleTypeDef hcan1;
 

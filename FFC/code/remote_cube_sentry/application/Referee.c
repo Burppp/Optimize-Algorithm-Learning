@@ -54,39 +54,6 @@ static void ui_static_draw();
 extern fp32 INS_angle[3];
 extern DMA_HandleTypeDef hdma_usart1_tx;
 
-//串口中断函数
-void USART6_IRQHandler(void)
-{
-    static volatile uint8_t res;
-    if(USART6->SR & UART_FLAG_IDLE)
-    {
-        __HAL_UART_CLEAR_PEFLAG(&huart6);//读取UART6-SR 和UART6-DR; 清除中断标志位
-
-        __HAL_DMA_DISABLE(huart6.hdmarx); //使能dma_rx
-
-        Referee_read_data(&usart6_buf[0]);
-
-        huart1.gState = HAL_UART_STATE_READY;
-        hdma_usart1_tx.State = HAL_DMA_STATE_READY;
-        __HAL_UNLOCK(&hdma_usart1_tx);
-        usart1_tx_dma_enable((uint8_t*)&Referee, sizeof(Referee));
-        uart_send_data((uint8_t*)&Referee, sizeof(Referee), REFEREE);
-//        HAL_UART_Transmit_DMA(&huart1, (uint8_t*)&Referee, sizeof(Referee));
-        huart1.gState = HAL_UART_STATE_READY;
-        hdma_usart1_tx.State = HAL_DMA_STATE_READY;
-        __HAL_UNLOCK(&hdma_usart1_tx);
-
-//        memset(&usart6_buf[0],0,REFEREE_BUFFER_SIZE);//置0
-
-        __HAL_DMA_CLEAR_FLAG(huart6.hdmarx,DMA_LISR_TCIF1); //清除传输完成标志位
-
-        __HAL_DMA_SET_COUNTER(huart6.hdmarx, REFEREE_BUFFER_SIZE);//设置DMA 搬运数据大小 单位为字节
-
-        __HAL_DMA_ENABLE(huart6.hdmarx); //使能DMARx
-
-    }
-}
-
 //根据裁判系统信息判断机器人的ID和对应客户端的ID
 void judge_team_client(){
     //本机器人为红方

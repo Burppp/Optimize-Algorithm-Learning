@@ -60,6 +60,8 @@ include_directories(Core/Inc
         Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src
         Middlewares/ST/STM32_USB_Device_Library/Core/Inc
         Middlewares/ST/STM32_USB_Device_Library/Core/Src
+        Middlewares/ST/ARM/DSP/Inc
+        Middlewares/ST/ARM/DSP/Lib
         Drivers/CMSIS/Device/ST/STM32F4xx/Include
         Drivers/CMSIS/Include
         bsp
@@ -98,6 +100,8 @@ add_executable(${PROJECT_NAME}.elf ${SOURCES} ${LINKER_SCRIPT})
 
 set(HEX_FILE ${PROJECT_BINARY_DIR}/${PROJECT_NAME}.hex)
 set(BIN_FILE ${PROJECT_BINARY_DIR}/${PROJECT_NAME}.bin)
+
+target_link_libraries(${PROJECT_NAME}.elf ${CMAKE_SOURCE_DIR}/Middlewares/ST/ARM/DSP/Lib/libarm_cortexM4lf_math.a)
 
 add_custom_command(TARGET ${PROJECT_NAME}.elf POST_BUILD
         COMMAND ${CMAKE_OBJCOPY} -Oihex $<TARGET_FILE:${PROJECT_NAME}.elf> ${HEX_FILE}

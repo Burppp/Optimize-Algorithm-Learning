@@ -5,13 +5,11 @@
 #include "Feedforward_test.h"
 #include "bsp_dwt.h"
 
+extern UART_HandleTypeDef huart6;
+
 pid_t pid;
-uint16_t count = 0;
-fp32 speed_set = 0;
-fp32 pos_set = 0;
-fp32 gap = 0;
-fp32 time = 0, last_time = 0;
-fp32 real_time = 0;
+fp32 time = 0;
+fp32 torque_set = 0;
 
 DM_Motor Motor;
 Feedforward_t feedforward;
@@ -24,6 +22,9 @@ void FeedForward_Init()
     pid.n = 673.871313792833;
 }
 
+feedback_data data;
+char frame_head = 'h';
+char frame_tail = 'j';
 _Noreturn void FeedForwardControll_task(void const * argument)
 {
     vTaskDelay(INIT_TIME);
@@ -36,23 +37,19 @@ _Noreturn void FeedForwardControll_task(void const * argument)
     DWT_Init(168);
     while(1)
     {
-//        feedforward.Output = Feedforward_Calculate(&feedforward, speed_set);
-
         time = DWT_GetTimeline_ms();
-        real_time = time / 1000;
-//        if(time - last_time > 1000)// || gap > 12.5
-//        {
-//            last_time = time;
-//            pos_set = Motor.position + 1.0f;
-//        }
-//        if(gap > 12.5)
-//        {
-//            pos_set = Motor.position;
-//        }
+        torque_set = 0.3 * arm_sin_f32(0.001 * time + 3);
 
-        speed_set = pid_calc(&pid, Motor.position, pos_set);
-        Speed_CtrlMotor(&hcan1, 0x201, speed_set);
-        gap = pos_set - Motor.position;
+        MIT_CtrlMotor(&hcan1, 0x03, 0, 0, 0, 0, torque_set);
+
+//        data.time = (uint32_t)(time * 1000000);
+        data.torque_feedback = Motor.torque * 100;
+        data.torque_set = torque_set * 100;
+
+        HAL_UART_Transmit(&huart6, (uint8_t *)&frame_head, sizeof(frame_head), 0xff);
+        HAL_UART_Transmit(&huart6, (uint8_t *)&data, sizeof(data), 0xff);
+        HAL_UART_Transmit(&huart6, (uint8_t *)&frame_tail, sizeof(frame_tail), 0xff);
+
         vTaskDelayUntil(&last_wake_time, CHASSIS_PERIOD);
     }
 }

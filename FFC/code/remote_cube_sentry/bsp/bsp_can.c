@@ -327,7 +327,7 @@ uint8_t Data_Clear_Error[8] = {0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0
 //达妙电机使能
 void DM_enable(void)
 {
-    CANx_SendStdData(&hcan1, 0x201, Data_Enable, 8);
+    CANx_SendStdData(&hcan1, 0x03, Data_Enable, 8);
 }
 
 void Speed_CtrlMotor(CAN_HandleTypeDef* hcan,uint16_t ID,fp32 _vel)
@@ -437,7 +437,7 @@ void DM_MotorDecode(DM_Motor *motor,uint8_t can_type,uint32_t can_id,uint8_t * c
 {
     if(can_type == CAN_1)
     {
-        if (0x00 == can_id) {
+        if (0x13 == can_id) {
             status = can_msg[0] & 0xF0;
             if(status == 0)
             {

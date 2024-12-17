@@ -288,7 +288,7 @@ extern void gimbal_motor_decode(gimbal_motor_t *motor,uint8_t can_type,uint32_t 
 extern void launcher_motor_decode(launcher_motor_t *motor,uint8_t can_type,uint32_t can_id,uint8_t * can_msg);
 extern void can_send_dji_motor(CAN_TYPE can_type, DJI_MOTOR_ID CMD_ID, int16_t motor1, int16_t motor2, int16_t motor3, int16_t motor4);
 extern void can_send_xiaomi_motor(fp32 speed);
-extern void DM_enable(void);
+extern void DM_enable(uint16_t ID);
 extern void Speed_CtrlMotor(CAN_HandleTypeDef* hcan,uint16_t ID,fp32 _vel);
 extern int float_to_uint(float x, float x_min, float x_max, int bits);
 extern void MIT_CtrlMotor(CAN_HandleTypeDef* hcan,uint16_t id, float _pos, float _vel, float _KP, float _KD, float _torq);

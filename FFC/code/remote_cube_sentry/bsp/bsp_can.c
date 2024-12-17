@@ -315,8 +315,8 @@ uint8_t Data_Clear_Error[8] = {0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0
 
 #define P_MIN -12.5f
 #define P_MAX 12.5f
-#define V_MIN -30.0f
-#define V_MAX 30.0f
+#define V_MIN -5.0f
+#define V_MAX 5.0f
 #define KP_MIN 0.0f
 #define KP_MAX 500.0f
 #define KD_MIN 0.0f
@@ -325,7 +325,7 @@ uint8_t Data_Clear_Error[8] = {0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0
 #define T_MAX 10.0f
 
 //达妙电机使能
-void DM_enable(void)
+void DM_enable(uint16_t ID)
 {
     CANx_SendStdData(&hcan1, 0x03, Data_Enable, 8);
 }
@@ -441,7 +441,7 @@ void DM_MotorDecode(DM_Motor *motor,uint8_t can_type,uint32_t can_id,uint8_t * c
             status = can_msg[0] & 0xF0;
             if(status == 0)
             {
-                DM_enable();
+                DM_enable(0x03);
             }
             Motor.p_int=(can_msg[1]<<8)|can_msg[2];
             Motor.v_int=(can_msg[3]<<4)|(can_msg[4]>>4);

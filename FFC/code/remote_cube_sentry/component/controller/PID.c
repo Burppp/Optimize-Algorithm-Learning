@@ -80,6 +80,7 @@ float pid_calc(pid_t *pid, float get, float set)
     pid->iterm = pid->i * pid->err[NOW] * pid->dt;
 
 //    pid->iout += pid->i * pid->err[NOW];
+    pid->iout += pid->iterm;
     pid->dout = pid->d * (pid->err[NOW] - pid->err[LAST]);
 
     if(pid->n)

@@ -13,15 +13,15 @@
 #include "Feedforward.h"
 
 #define INIT_TIME 150
-#define CHASSIS_PERIOD 5
+#define CHASSIS_PERIOD 2
 
 extern CAN_HandleTypeDef hcan1;
 
 typedef struct
 {
 //    uint32_t time;
-    int16_t torque_feedback;
-    int16_t torque_set;
+    int16_t speed_feedback;
+    int16_t speed_set;
 }feedback_data;
 
 void FeedForwardControll_task(void const * argument);

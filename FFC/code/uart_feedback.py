@@ -6,13 +6,13 @@ from datetime import datetime
 
 # 定义新的反馈数据结构体，取消了time字段
 class FeedbackData:
-    def __init__(self, torque_feedback, torque_set):
-        self.torque_feedback = torque_feedback
-        self.torque_set = torque_set
+    def __init__(self, _feedback, _set):
+        self._feedback = _feedback
+        self._set = _set
 
     def __str__(self):
-        return (f"Torque Feedback: {self.torque_feedback}, "
-                f"Torque Set: {self.torque_set}")
+        return (f"Feedback: {self._feedback}, "
+                f"Set: {self._set}")
 
 # 串口配置
 ser = serial.Serial(
@@ -29,7 +29,11 @@ def ensure_csv_file(file_path):
     if not os.path.exists(file_path):
         with open(file_path, mode='w', newline='') as file:
             writer = csv.writer(file)
-            writer.writerow(['Value'])  # 写入表头
+            writer.writerow(['Timestamp', 'Value'])  # 写入表头
+
+# 获取当前时间，精确到毫秒
+def get_current_time_ms():
+    return datetime.now().strftime("%Y-%m-%d %H:%M:%S.%f")[:-3]
 
 # 读取串口数据并写入CSV
 def read_feedback_data():
@@ -54,20 +58,20 @@ def read_feedback_data():
             # print(f"len(data) = {len(data)}")
             if len(data) == 4:  # 现在数据部分应该有4个字节
                 # 使用struct解包数据，'h'表示有符号的16位整数
-                torque_feedback, torque_set = struct.unpack('<hh', data)
-                torque_feedback = float(torque_feedback / 1000)
-                torque_set = float(torque_set / 1000)
-                feedback = FeedbackData(torque_feedback, torque_set)
-                print(feedback)
+                _feedback, _set = struct.unpack('<hh', data)
+                _feedback = float(_feedback / 1000)
+                _set = float(_set / 1000)
+                feedback = FeedbackData(_feedback, _set)
+                print(f"{get_current_time_ms()}: {feedback}")
 
                 # 写入CSV文件
-                with open('torque_feedback.csv', mode='a', newline='') as file:
+                with open('feedback.csv', mode='a', newline='') as file:
                     writer = csv.writer(file)
-                    writer.writerow([torque_feedback])
+                    writer.writerow([get_current_time_ms(), _feedback])
 
-                with open('torque_set.csv', mode='a', newline='') as file:
+                with open('set.csv', mode='a', newline='') as file:
                     writer = csv.writer(file)
-                    writer.writerow([torque_set])
+                    writer.writerow([get_current_time_ms(), _set])
             else:
                 print("Received incomplete data.")
         else:
@@ -76,8 +80,8 @@ def read_feedback_data():
         print(f"Serial error: {e}")
 
 # 确保CSV文件存在
-ensure_csv_file('torque_feedback.csv')
-ensure_csv_file('torque_set.csv')
+ensure_csv_file('feedback.csv')
+ensure_csv_file('set.csv')
 
 # 主循环
 try:
